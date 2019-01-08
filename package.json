@@ -4,7 +4,6 @@
   "description": "Node.js monorepo example with yarn workspaces",
   "main": "index.js",
   "scripts": {
-    "start": "yarn api start",
     "lint": "eslint packages/",
     "lint:write": "eslint --fix packages/",
     "command": "yarn cli start",
