@@ -1,0 +1,16 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "config": "^3.0.1",
+    "express": "4.16.4",
+    "helpers": "1.0.0",
+    "jwt": "1.0.0",
+    "models": "1.0.0",
+    "nodemailer": "^4.7.0"
+  }
+}

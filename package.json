@@ -1,0 +1,51 @@
+{
+  "name": "node-monorepo-example",
+  "version": "1.0.0",
+  "description": "Node.js monorepo example with yarn workspaces",
+  "main": "index.js",
+  "scripts": {
+    "start": "yarn api start",
+    "lint": "eslint packages/",
+    "lint:write": "eslint --fix packages/",
+    "command": "yarn cli start",
+    "helpers": "yarn workspace helpers",
+    "api": "yarn workspace api",
+    "models": "yarn workspace models",
+    "cli": "yarn workspace cli",
+    "repl": "yarn workspace repl",
+    "jwt": "yarn workspace jwt"
+  },
+  "repository": "https://github.com/lucasprieto/node-monorepo-example",
+  "author": "Lucas Prieto <lucasprieto12@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/api",
+    "packages/models",
+    "packages/helpers",
+    "packages/repl",
+    "packages/cli",
+    "packages/jwt"
+  ],
+  "devDependencies": {
+    "eslint": "^5.11.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:write",
+      "git add"
+    ]
+  }
+}

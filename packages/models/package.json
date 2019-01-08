@@ -1,0 +1,9 @@
+{
+  "name": "models",
+  "version": "1.0.0",
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "moment": "^2.23.0",
+    "mongoose": "^5.4.0"
+  }
+}

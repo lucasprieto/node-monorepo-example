@@ -1,0 +1,7 @@
+{
+  "name": "jwt",
+  "version": "1.0.0",
+  "dependencies": {
+    "jsonwebtoken": "^8.4.0"
+  }
+}

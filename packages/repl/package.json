@@ -1,0 +1,13 @@
+
+{
+  "name": "repl",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node --experimental-repl-await index.js"
+  },
+  "dependencies": {
+    "models": "1.0.0",
+    "helpers": "1.0.0",
+    "jwt": "1.0.0"
+  }
+}
