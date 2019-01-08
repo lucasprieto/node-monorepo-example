@@ -8,6 +8,6 @@ const authController = require('./controllers/authController')
 
 router.post('/auth', authController.login)
 
-router.get('/testjwt', auth, (req, res) => res.status(200).send('OK'))
+router.get('/testjwt', auth, (req, res) => res.status(200).send('OK.'))
 
 module.exports = router
