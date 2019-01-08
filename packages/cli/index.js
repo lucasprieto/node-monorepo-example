@@ -4,11 +4,12 @@
 
 const program = require('commander')
 const models = require('models')
+const config = require('config')
 const app = require('./package.json')
 
 const userCommands = require('./commands/userCommands')
 
-const mongoUri = ''
+const mongoUri = config.get('database').connection
 
 program.version(app.version)
 

@@ -6,7 +6,8 @@
   },
   "dependencies": {
     "commander": "^2.19.0",
-    "models": "1.0.0",
-    "helpers": "1.0.0"
+    "config": "^3.0.1",
+    "helpers": "1.0.0",
+    "models": "1.0.0"
   }
 }
