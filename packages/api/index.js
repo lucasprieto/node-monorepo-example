@@ -1,12 +1,16 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const { connect } = require('models')
-const { connection } = require('config').get('database')
+const config = require('config')
 // routes
 const routes = require('./routes')
 // middleware
 const allowCrossDomain = require('./middlewares/cors')
 const errorHandling = require('./middlewares/errorHandling')
+
+// Configs
+const { connection } = config.get('database')
+const { port } = config.get('server')
 
 // Create Server
 const app = express()
@@ -24,7 +28,7 @@ app.use(errorHandling)
 
 const startServer = async () => {
   await connect(connection)
-  app.listen(3000)
+  app.listen(port)
 }
 
 startServer()

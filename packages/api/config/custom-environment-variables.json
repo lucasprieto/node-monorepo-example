@@ -1,5 +1,8 @@
 {
   "database": {
     "connection": "DB_CONN"
+  },
+  "server": {
+    "port": "PORT"
   }
 }
